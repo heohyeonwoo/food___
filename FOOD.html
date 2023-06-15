@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./FOOD.css" />
+    </head>
+    <body>
+        <header>
+            <h1>음식 메뉴 소개</h1>
+        </header>
+        <div class="left-sidebar">
+            <h2>&nbsp;음식 목록</h2>
+            <ul>
+                <div class="image">
+                    <li onclick="setClassification('한식')">한식 대표메뉴:김치찌개</li>
+                    <img src="./한식 김치찌개.jpg" width="150px" height="150px" />
+                    <br />
+
+                    <li onclick="setClassification('중식')">중식 대표메뉴:짜장면</li>
+                    <img src="./짜장면.jpg" width="150px" height="150px" />
+                    <br />
+
+                    <li onclick="setClassification('양식')">양식 대표메뉴:파스타</li>
+                    <img src="./양식 파스타.jpg" width="150px" height="150px" />
+                    <br />
+
+                    <li onclick="setClassification('분식')">분식 대표메뉴:떡볶이</li>
+                    <img src="./분식.jpg" width="150px" height="150px" />
+                    <br />
+
+                    <li onclick="setClassification('일식')">일식 대표메뉴:초밥</li>
+                    <img src="./일식 초밥.jpg" width="150px" height="150px" />
+                </div>
+            </ul>
+        </div>
+        <div class="main">
+            분류: <input type="text" placeholder="분류" id="classification" />
+            음식 이름: <input type="text" placeholder="음식 이름" id="foodName" />
+            <input type="button" value="Add" onclick="addList()" />
+            <table id="myTable" border="1">
+                <thead>
+                    <tr>
+                        <th>분류</th>
+                        <th>음식 이름</th>
+                        <th>가격</th>
+                        <th>음식 정보</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody"></tbody>
+            </table>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
